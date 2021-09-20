@@ -15,6 +15,7 @@ class MessageSender(
     @Scheduled(cron = "* * * * * *")
     fun schedule() {
         send(Instant.now().toString())
+        println("sending...")
     }
 
     fun send(message: String) {
